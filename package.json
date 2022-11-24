@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/OlafGG/proyectoFinal-express/issues"
   },
-  "homepage": "https://github.com/OlafGG/proyectoFinal-express#readme"
+  "homepage": "https://github.com/OlafGG/proyectoFinal-express#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.20"
+  }
 }
