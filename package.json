@@ -1,0 +1,19 @@
+{
+  "name": "proyectofinal-express",
+  "version": "1.0.0",
+  "description": "final proyect express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlafGG/proyectoFinal-express.git"
+  },
+  "author": "Uriel Olaf Baeza Baeza, Jorge Campos Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OlafGG/proyectoFinal-express/issues"
+  },
+  "homepage": "https://github.com/OlafGG/proyectoFinal-express#readme"
+}
