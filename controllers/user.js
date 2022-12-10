@@ -4,15 +4,15 @@ const db = require('../config/user.database');
 const jwt = require('jsonwebtoken');
 
 const getuser = async (req, res) => {
-    const query = await db.query("SELECT * FROM user");
+    const query = await db.query("SELECT * FROM empleados");
     return res.status(200).json({code: 200, message: query});
 }
 
 const postUser = async (req, res) => {
-    const { user_name, user_mail, user_password } = req.body;
-    if (user_name && user_mail && user_password ){
-        let query = "INSERT INTO user(user_name, user_mail, user_password)"
-        query += ` VALUES('${user_name}', '${user_mail}', '${user_password}')`;
+    const { correo_electronico, empleado_nombre, empleado_apellido, empleado_telefono, empleado_direccion } = req.body;
+    if (correo_electronico && empleado_nombre && empleado_apellido && empleado_telefono && empleado_direccion ){
+        let query = "INSERT INTO empleados(correo_electronico, empleado_nombre, empleado_apellido, empleado_telefono, empleado_direccion)"
+        query += ` VALUES('${correo_electronico}', '${empleado_nombre}', '${empleado_apellido}', '${empleado_telefono}', '${empleado_direccion}')`;
 
         const rows = await db.query(query);
 
@@ -27,18 +27,18 @@ const postUser = async (req, res) => {
 }
 
 const getoneuser = async (req, res) => {
-    const { user_name } = req.body;
-    if (user_name) {
-        const query = await db.query(`SELECT * FROM user WHERE user_name = '${user_name}'`);
+    const { empleado_nombre } = req.body;
+    if (empleado_nombre) {
+        const query = await db.query(`SELECT * FROM empleados WHERE empleado_nombre = '${empleado_nombre}'`);
         return res.status(200).json({code: 200, message: query})
     }
     return res.status(404).json({code:404, message: "Usuario no encontrado"})
 }
 
 const deleteUser = async (req, res) => {
-    const { user_id } = req.body;
-    if(user_id){
-        const query = `DELETE FROM user WHERE user_id = ${user_id}`;
+    const { empleado_id } = req.body;
+    if(empleado_id){
+        const query = `DELETE FROM empleados WHERE empleado_id = ${empleado_id}`;
         const rows = await db.query(query);
         if (rows.affectedRows == 1){
             return res.status(200).json({code: 200, message: "Usuario eliminado correctamente"});
@@ -51,9 +51,9 @@ const deleteUser = async (req, res) => {
 }
 
 const userPatch = async (req, res) => {
-    const { user_id, user_name, user_mail } = req.body;
-    if(user_id && user_name && user_mail){
-        let query = `UPDATE user SET user_name = '${user_name}', user_mail='${user_mail}' WHERE user_id = ${user_id}`;
+    const { empleado_id, correo_electronico, empleado_nombre, empleado_apellido, empleado_telefono, empleado_direccion } = req.body;
+    if (correo_electronico && empleado_nombre && empleado_apellido && empleado_telefono && empleado_direccion ){
+        let query = `UPDATE empleados SET correo_electronico = '${correo_electronico}', empleado_nombre = '${empleado_nombre}', empleado_apellido = '${empleado_apellido}', empleado_telefono = '${empleado_telefono}', empleado_direccion = '${empleado_direccion}'  WHERE empleado_id = ${empleado_id}`;
 
         const rows = await db.query(query);
 

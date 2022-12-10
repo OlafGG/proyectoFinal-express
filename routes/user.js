@@ -6,7 +6,7 @@ const user = Router();
 
 user.get('/', getuser);
 user.get('/oneuser', getoneuser);
-user.post('/signin', postUser);
+user.post('/userspost', postUser);
 user.delete('/', deleteUser);
 user.patch('/', userPatch);
 
