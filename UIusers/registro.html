@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/registro.js"></script>
+    <link rel="stylesheet" href="./css/registro.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./css/registro.css">
+</head>
+</head>
+<body>
+    <header>
+		<nav>
+			<ul>
+				<!-- <li onclick="location.href='../principal.html'">Inicio</li>
+				<li onclick="location.href='../a-g-p/ap.html'">Agregar Personal</li>
+				<li onclick="location.href='mp.html'">Modificar Personal</li>
+				<li onclick="location.href='../e-p/ep.html'">Eliminar Personal</li>
+				<li onclick="location.href='../b-p/bp.html'">Buscar Personal</li> -->
+                <li onclick="location.href='./users.html'">Inicio</li>
+				<li>Agregar Personal</li>
+				<!-- <li>Modificar Personal</li>
+				<li>Eliminar Personal</li>
+				<li>Buscar Personal</li> -->
+				
+			</ul>
+		</nav>
+	</header>
+
+    <div class="container">
+        <div class="titulo1">
+            <div class="estiloT">
+                <h1>Agregar usuarios</h1>
+            </div>
+        </div>
+        <div class="segmento">
+            <div class="opciones">
+                <div class="fila">
+                    <label for="input-mail">Correo electrónico</label>
+                    <input type="email" class="form-control" id="input-mail" placeholder="correo@dominio.ext">
+                    <!--<small class="form-text text-muted">El correo con el que te registraste.</small>-->
+                </div>
+                <div class="fila">
+                    <label for="input-name">Nombre</label>
+                    <input type="text" class="form-control" id="input-name" placeholder="Nombre">
+                </div>
+                <div class="fila">
+                    <label for="input-2name">Apellidos</label>
+                    <input type="text" class="form-control" id="input-name2" placeholder="Apellidos">
+                </div>
+                <div class="fila">
+                    <label for="input-number">Telefono</label>
+                    <input type="text" class="form-control" id="input-number" placeholder="Telefono">
+                </div>
+                <div class="fila">
+                    <label for="input-address">Dirección</label>
+                    <input type="text" class="form-control" id="input-adress" placeholder="Dirección">
+                </div>
+                <div class="botons">
+                    <button class="btn btn-primary">Registrar</button>
+                    <button class="btn btn-secondary">Cancelar</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

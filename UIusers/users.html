@@ -4,36 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BASE DE DATOS</title>
+    <title>Administrador de Personal</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="./js/users.js"></script>
+    <link rel="stylesheet" href="./css/users.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./css/users.css">
 </head>
-<body> 
+<body>
+    <header>
+		<nav>
+			<ul>
+				<!-- <li onclick="location.href='../principal.html'">Inicio</li>
+				<li onclick="location.href='../a-g-p/ap.html'">Agregar Personal</li>
+				<li onclick="location.href='mp.html'">Modificar Personal</li>
+				<li onclick="location.href='../e-p/ep.html'">Eliminar Personal</li>
+				<li onclick="location.href='../b-p/bp.html'">Buscar Personal</li> -->
+                <li>Inicio</li>
+				<li onclick="location.href='./registro.html'">Agregar Personal</li>
+				<button class="btn btn_cerrar">Cerrar Sesión</button>
+				<!-- <li>Eliminar Personal</li>
+				<li>Buscar Personal</li> -->
+				
+			</ul>
+		</nav>
+	</header>
+    
+
     <div class="container">
-        <div class="row mt-5">
-            <div class="col-6 offset-3">
-                <h1>Borrar</h1>
+        <div class="titulo1">
+            <div class="estiloT">
+                <h1>Personal</h1>
             </div>
         </div>
-        <div class="row align-items-center">
-            <div class="col-6 offset-3">
-                <div class="form-group">
-                    <label for="input-mail">Correo electrónico</label>
-                    <input type="email" class="form-control" id="input-mail" placeholder="correo@dominio.ext">
-                    <small class="form-text text-muted">El correo con el que te registraste.</small>
-                </div>
-                <div class="form-group">
-                    <label for="input-password">Contraseña</label>
-                    <input type="password" class="form-control" id="input-password" placeholder="***********">
-                </div>
-                <div class="d-flex justify-content-between">
-                    <button class="btn btn-primary">Entrar</button>
-                </div>
-            </div>
+        <nav class="navbar">
+            <button onclick="location.href='./registro.html'" class="btn4 btn-add">Añadir</button>
+            <form class="form-inline">
+                
+                <input class="form-control buscardor_name" id="input_buscar" data-table="table_id" type="text" placeholder="Search" >
+                <button class="btn3 btn-buscar">Search</button>
+            </form>
+        </nav>
+        <div class="tabla-datos">
+            <table class="table table_id">
+                <thead> 
+                    <tr>
+                    <th>ID</th>
+                    <th>Correo</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                    <th>opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        
+                </tbody>
+               
+            </table>
+
         </div>
     </div>
 </body>
